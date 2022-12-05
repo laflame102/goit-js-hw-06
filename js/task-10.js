@@ -20,10 +20,10 @@ function onCreateBoxes(amount) {
 
   for (let i = 0; i < amount; i += 1){
     const newBox = document.createElement('div');
-    const boxSize = 30;
+    const boxSize = 30 + 10 * i;
 
-    newBox.style.width = `${boxSize + 10}px`
-    newBox.style.height = `${boxSize + 10}px`
+    newBox.style.width = `${boxSize}px`
+    newBox.style.height = `${boxSize}px`
     newBox.style.backgroundColor = getRandomHexColor();
 
     boxesCollection.push(newBox);

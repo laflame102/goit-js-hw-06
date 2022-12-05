@@ -4,13 +4,14 @@
 // знайде і виведе в консоль текст заголовку елемента(тегу < h2 >) 
 // і кількість елементів в категорії(усіх < li >, вкладених в нього).
 // В результаті, в консолі будуть виведені наступні повідомлення.
-const numOfCat = document.querySelectorAll('.item');
+const amountOfCat = document.querySelector('#categories');
+const elemOfCat = document.querySelectorAll('.item');
 
-console.log('Number of categories:', numOfCat.length)
+console.log('Number of categories:', amountOfCat.children.length)
 
-for (let i = 0; i < numOfCat.length; i += 1) {
-    console.log('Category: ', numOfCat[i].querySelector('h2').textContent);
-    console.log('Elements: ', numOfCat[i].querySelectorAll('ul li').length)
+for (let i = 0; i < elemOfCat.length; i += 1) {
+    console.log('Category: ', elemOfCat[i].firstElementChild.textContent);
+    console.log('Elements: ', elemOfCat[i].querySelectorAll('ul li').length)
 }
 
 

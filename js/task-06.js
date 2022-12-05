@@ -11,10 +11,12 @@ const refs = {
 refs.input.addEventListener('blur', onValidAmountChar);
 
 function onValidAmountChar() {
- if (refs.input.value.length >= Number(refs.characters.dataset.length)) {
-   return refs.input.classList.add('valid')
- }
-    return refs.input.classList.replace('valid', 'invalid')
+  if (refs.input.value.length >= Number(refs.characters.dataset.length)) {
+    refs.input.classList.add('valid');
+    refs.input.classList.remove('invalid');
+  } else {
+    refs.input.classList.add('invalid');
+    refs.input.classList.remove('valid');
+  }
+  
 }
-
-

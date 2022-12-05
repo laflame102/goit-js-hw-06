@@ -17,10 +17,9 @@ function onSubmit(event) {
     if (!email.value || !password.value) {
         alert('Всі поля повинні бути заповнені');
     } else {
-    console.log(`Login: ${email.value}`);
-    console.log(`Password: ${password.value}`);
-    }
+    console.log({ 'Login': email.value, 'Password': password.value });
     event.currentTarget.reset();
+    } 
 }
 
 
